@@ -10,6 +10,8 @@
 #else
 	extern int		ft_strlen(const char *str);
 	extern void		ft_putstr(const char *str);
+	extern void		ft_puts(const char *str);
+	extern void		ft_putchar(const char c);
 
 # endif
 

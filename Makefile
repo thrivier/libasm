@@ -21,7 +21,7 @@ OBJ = $(patsubst $(DIR_SRC)/%,$(DIR_OBJ)/%, $(SRC:.s=.o))
 
 all: $(NAME)
 test:
-	gcc main.c -o $(TEST) $(LIBS) $(INCLUDES)
+	gcc -g main.c -o $(TEST) $(LIBS) $(INCLUDES)
 $(DIR_OBJ)/%.o: $(DIR_SRC)/%.s
 	@mkdir -p $(dir $@)
 	$(CMD_CP) $(FLAG) $< -o $@
