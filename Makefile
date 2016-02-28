@@ -1,13 +1,14 @@
 NAME = libft.a
 TEST = test
-CMD_CP = nasm
 INCLUDES=-Iincludes
 LIBS = -L . -lft
 
 ifdef __LINUX__
 FLAG = -f elf64
+CMD_CP = nasm
 else
 FLAG = -f macho64
+CMD_CP = ~/.brew/Cellar/nasm/2.11.08_1/bin/nasm
 endif
 
 DIR_SRC = srcs
