@@ -5,10 +5,9 @@ _ft_strlen:
     mov rbp, rsp
     xor rax, rax
 _loop:
-    cmp byte [rdi], 0
+    cmp byte [rdi + rax], 0
     je _end
     inc rax
-    inc rdi
     jmp _loop
 
 _end:
