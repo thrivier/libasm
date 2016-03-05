@@ -1,14 +1,13 @@
 global _ft_putchar
-extern _write
+extern write
 
 _ft_putchar:
-	push rbp
-	mov rbp, rsp
-	xor rsi, rsi
-	mov rdx, 1
-	mov rsi, rdi
-	mov rdi, 1
-	mov rax, 0x2000004
-	syscall
-	leave
-	ret
+    xor rax, rax
+    mov rax, rdi
+    rep stosb
+    mov rsi, rdi
+    mov rdi, 1
+    mov rdx, 1
+    call write
+    ret
+
